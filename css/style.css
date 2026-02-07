@@ -1,12 +1,7 @@
-/* ==========================================
-   Personal Portfolio - External Stylesheet
-   Pure HTML/CSS - No Libraries
-   ========================================== */
 
-/* Google Fonts - Fira Code for code-like aesthetic */
+/* Google Fonts - Fira Code */
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap');
 
-/* CSS Custom Properties (Variables) */
 :root {
     --primary: #c778dd;
     --grey: #abb2bf;
@@ -19,7 +14,6 @@
     --transition: 0.3s ease;
 }
 
-/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -81,9 +75,7 @@ ul, ol {
     flex: 1;
 }
 
-/* ==========================================
-   Header & Navigation
-   ========================================== */
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -125,7 +117,7 @@ nav ul li a span {
     color: var(--primary);
 }
 
-/* Pure CSS Mobile Menu Toggle */
+/*Mobile Menu Toggle */
 .menu-toggle {
     display: none;
 }
@@ -147,9 +139,7 @@ nav ul li a span {
     display: block;
 }
 
-/* ==========================================
-   Hero Section
-   ========================================== */
+/*hero section*/
 .hero {
     margin-top: 2rem;
     display: flex;
@@ -207,9 +197,7 @@ nav ul li a span {
     height: auto;
 }
 
-/* ==========================================
-   Section Titles
-   ========================================== */
+/*Section Titles*/
 .section-title {
     color: var(--white);
     margin: 2rem 0 1rem;
@@ -227,9 +215,7 @@ nav ul li a span {
     margin-bottom: 2rem;
 }
 
-/* ==========================================
-   Projects Section
-   ========================================== */
+/*Projects Section*/
 .projects-section {
     padding: 2rem 0;
 }
@@ -287,9 +273,7 @@ nav ul li a span {
     line-height: 1.6;
 }
 
-/* ==========================================
-   Tech Stack / Skills Section
-   ========================================== */
+/*Tech Stack / Skills Section*/
 .tech-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -327,9 +311,7 @@ nav ul li a span {
     text-align: center;
 }
 
-/* ==========================================
-   About Section
-   ========================================== */
+/*About Section*/
 .about-section {
     padding: 2rem 20px;
 }
@@ -345,7 +327,7 @@ nav ul li a span {
     line-height: 1.8;
 }
 
-/* Education Table */
+/*Education Table*/
 .education-table {
     width: 100%;
     border-collapse: collapse;
@@ -376,8 +358,73 @@ nav ul li a span {
     background: var(--card-bg-hover);
 }
 
-.education-table td {
+/* Education Timeline */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 2rem 0;
+    padding-left: 30px;
+    border-left: 2px dotted var(--grey);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -35px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px var(--background-light); /* Matches .middle background */
+    transition: transform var(--transition), background-color var(--transition);
+}
+
+.timeline-item:hover .timeline-dot {
+    transform: scale(1.3);
+    background-color: var(--white);
+}
+
+/* For lighter background elements if any, ensuring contrast */
+.timeline-content {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--grey-dark);
+    transition: transform var(--transition);
+}
+
+.timeline-content:hover {
+    transform: translateX(5px);
+    background: var(--card-bg-hover);
+}
+
+.timeline-date {
+    display: inline-block;
+    color: var(--primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-title {
+    color: var(--white);
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+.timeline-subtitle {
     color: var(--grey);
+    font-size: 0.95rem;
 }
 
 /* Lists */
@@ -396,9 +443,7 @@ nav ul li a span {
     color: var(--primary);
 }
 
-/* ==========================================
-   Contact Section
-   ========================================== */
+/*Contact Section*/
 .contact-section {
     padding: 2rem 20px;
 }
@@ -500,9 +545,7 @@ nav ul li a span {
     transform: translateY(-2px);
 }
 
-/* ==========================================
-   Footer
-   ========================================== */
+/*Footer*/
 footer {
     background-color: var(--background);
     padding: 3rem 0 1rem 0;
@@ -578,9 +621,7 @@ footer {
     font-size: 0.9rem;
 }
 
-/* ==========================================
-   Intro Cards (Homepage)
-   ========================================== */
+/*Intro Cards (Homepage)*/
 .intro-section {
     padding: 2rem 20px;
 }
@@ -635,9 +676,7 @@ footer {
     color: var(--white);
 }
 
-/* ==========================================
-   Responsive Design - Media Queries
-   ========================================== */
+/*Responsive Design - Media Queries*/
 
 /* Large screens */
 @media (max-width: 1200px) {
